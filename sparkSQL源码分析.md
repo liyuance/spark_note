@@ -174,7 +174,7 @@ List(Project [name#29]
 )
 </code></pre>
 
-![sparkChildren](./res/sparkChildren.png =300x300)
+![sparkChildren](./res/sparkChildren.png)
 
 ### 2.sql(sqlText: String)代码分析
 <pre><code>
