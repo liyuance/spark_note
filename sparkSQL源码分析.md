@@ -229,10 +229,10 @@ def parseSql(sql: String): LogicalPlan = hqlParser.parse(sql)
 </code></pre>
 
 ExtendedHiveQlParser继承与抽象类AbstractSparkSQLParser。AbstractSparkSQLParser的主要实现有ExtendedHiveQlParser、SqlParser、DDLParser、SparkSQLParser。默认的SQLContex中得DefaultParserDialect使用的是SqlParser。AbstractSparkSQLParser的继承关系如下：
-<br>***此处与张图***<br>
+<br>***此处有张图***<br>
 具体sql的解析是调用了AbstractSparkSQLParser.parse()函数，代码比较晦涩，展开看下：
 
-```scala
+<pre><code>
   def parse(input: String): LogicalPlan = {
     // Initialize the Keywords.
     initLexical
@@ -241,36 +241,8 @@ ExtendedHiveQlParser继承与抽象类AbstractSparkSQLParser。AbstractSparkSQLP
       case failureOrError => sys.error(failureOrError.toString)
     }
   }
-```
+</code></pre>
 
-### 4. 高效绘制 [流程图](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#7-流程图)
-
-```flow
-st=>start: Start
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-e=>end
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-### 5. 高效绘制 [序列图](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#8-序列图)
-
-```seq
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
-
-### 6. 绘制表格
-
-| 项目        | 价格   |  数量  |
-| --------   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
-| 手机        |   \$12   |   12   |
-| 管线        |    \$1    |  234  |
 
 ## analyzer分析
 
