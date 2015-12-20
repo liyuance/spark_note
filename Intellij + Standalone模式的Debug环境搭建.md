@@ -1,4 +1,4 @@
-# Intellij + Standalone模式的Debug环境搭建.md 
+# Intellij + Standalone模式的Debug环境搭建
 
 ## 编译Spark代码
 ## 单机搭建spark standalone集群
